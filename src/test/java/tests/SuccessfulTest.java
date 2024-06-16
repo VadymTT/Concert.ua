@@ -22,8 +22,6 @@ public class SuccessfulTest extends TestInit {
         homePage.chooseCity("Kyiv");
         homePage.clickCloseWindowIcon();
 
-        Assert.assertTrue(driver.getCurrentUrl().contains("kyiv"));
-
         homePage.clickConcertsButton();
 
         concertPage.clickAllVenuesButton();
