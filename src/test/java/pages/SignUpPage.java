@@ -9,12 +9,6 @@ public class SignUpPage extends BasePage {
 
     public SignUpPage (WebDriver driver) { super(driver); }
 
-    private final String NAME_FIELD = "//input[@placeholder='Your name']";
-    private final String LAST_NAME_FIELD = "//input[@placeholder='Your lastname']";
-    private final String EMAIL_FIELD = "//input[@placeholder='E-mail']";
-    private final String ENTER_PASSWORD = "//input[@placeholder='Enter password']";
-    private final String REPEAT_PASSWORD = "//input[@placeholder='Repeat password']";
-
     private final String NAME_ERROR_MESSAGE = "//span[text()='The Name field must contain only letters']";
     private final String LAST_NAME_ERROR_MESSAGE = "//span[text()='The Surname field must contain only letters']";
     private final String EMAIL_ERROR_MESSAGE = "//span[text()='Email is not a valid email address.']";
@@ -25,31 +19,6 @@ public class SignUpPage extends BasePage {
     WebElement emailField = driver.findElement(By.xpath("//input[@placeholder='E-mail']"));
     WebElement passwordField = driver.findElement(By.xpath("//input[@placeholder='Enter password']"));
     WebElement repeatPasswordField = driver.findElement(By.xpath("//input[@placeholder='Repeat password']"));
-
-    public SignUpPage clickToNameField () {
-        waitUntilElementToBeClickable(NAME_FIELD).click();
-        return this;
-    }
-
-    public SignUpPage clickToLastNameField () {
-        waitUntilElementToBeClickable(LAST_NAME_FIELD).click();
-        return this;
-    }
-
-    public SignUpPage clickToEmailField () {
-        waitUntilElementToBeClickable(EMAIL_FIELD).click();
-        return this;
-    }
-
-    public SignUpPage clickToEnterPasswordField () {
-        waitUntilElementToBeClickable(ENTER_PASSWORD).click();
-        return this;
-    }
-
-    public SignUpPage clickToRepeatPasswordField () {
-        waitUntilElementToBeClickable(REPEAT_PASSWORD).click();
-        return this;
-    }
 
     public void enterName (String userName) { nameField.sendKeys(userName); }
 

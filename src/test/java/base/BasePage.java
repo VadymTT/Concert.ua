@@ -49,8 +49,4 @@ public class BasePage {
         driver.navigate().back();
     }
 
-    public void clickEmailInputField() {
-    }
-
-
 }

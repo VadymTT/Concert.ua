@@ -19,19 +19,10 @@ public class NegativeTest extends TestInit {
 
         loginPage.clickSignUpButton();
 
-        signUpPage.clickToNameField();
         signUpPage.enterName("2");
-
-        signUpPage.clickToLastNameField();
         signUpPage.enterLastName("2");
-
-        signUpPage.clickToEmailField();
         signUpPage.enterEmail("testemailgmail.com");
-
-        signUpPage.clickToEmailField();
         signUpPage.enterPassword("testing11111");
-
-        signUpPage.clickToRepeatPasswordField();
         signUpPage.enterPasswordRepeat("testing1111");
 
         Assert.assertTrue(signUpPage.getNameErrorMessage().isDisplayed());

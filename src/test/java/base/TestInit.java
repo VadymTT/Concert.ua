@@ -41,8 +41,4 @@ public class TestInit {
             }
         }
     }
-    public String getUrl() {
-        return driver.getCurrentUrl();
-    }
-
 }
