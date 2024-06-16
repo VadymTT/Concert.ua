@@ -13,11 +13,12 @@ public class NegativeTest extends TestInit {
     public void checkSuccessOfErrorMassages() {
         HomePage homePage = new HomePage(driver);
         LoginPage loginPage = new LoginPage(driver);
-        SignUpPage signUpPage = new SignUpPage(driver);
 
         homePage.clickSignInButton();
 
         loginPage.clickSignUpButton();
+
+        SignUpPage signUpPage = new SignUpPage(driver);
 
         signUpPage.enterName("2");
         signUpPage.enterLastName("2");
